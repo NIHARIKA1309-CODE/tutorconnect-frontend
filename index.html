@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorConnect | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">TutorConnect</h1>
+
+        <div class="login-form">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <button class="btn">Login</button>
+            <p>Don't have an account?</p>
+            <div class="signup-buttons">
+                <button onclick="showForm('teacher')">Teacher Registration</button>
+                <button onclick="showForm('student')">Student Registration</button>
+            </div>
+        </div>
+
+        <div class="signup-form" id="teacher-form">
+            <h2>Teacher Registration</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="Location" required>
+            <input type="text" placeholder="Add Fund (e.g., 101) - Refundable" required>
+            <input type="text" placeholder="Demo Time Preference" required>
+            <button class="btn">Submit</button>
+        </div>
+
+        <div class="signup-form" id="student-form">
+            <h2>Student Registration</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="Class" required>
+            <input type="text" placeholder="School" required>
+            <input type="text" placeholder="Location" required>
+            <input type="text" placeholder="Add Fund (e.g., 500) - Refundable" required>
+            <button class="btn">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function showForm(type) {
+            document.getElementById('teacher-form').style.display = (type === 'teacher') ? 'block' : 'none';
+            document.getElementById('student-form').style.display = (type === 'student') ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>
